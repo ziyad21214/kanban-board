@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kanban-board">
+        <div class="column" id="to-do">
+            <h3>To Do</h3>
+            <button class="add-task-button">+ Add Task</button>
+        </div>
+
+        <div class="column" id="in-progress">
+            <h3>In Progress</h3>
+            <div class="card">Write documentation</div>
+            <button class="add-task-button">+ Add Task</button>
+        </div>
+
+        <div class="column" id="review">
+            <h3>Review</h3>
+            <div class="card">Review design mockups</div>
+            <button class="add-task-button">+ Add Task</button>
+        </div>
+
+        <div class="column" id="done">
+            <h3>Done</h3>
+            <div class="card">Define project scope</div>
+            <button class="add-task-button">+ Add Task</button>
+        </div>
+    </div>
+
+    <dialog id="task-dialog">
+        <h3 class="dialog-title">Add Task</h3>
+        <form method="dialog" id="task-form">
+            <label for="task-title">Task Title:</label>
+            <input type="text" id="task-title" name="task-title" required>
+
+            <label for="task-description">Task Description:</label>
+            <textarea id="task-description" name="task-description" required></textarea>
+
+            <label for="task-due-date">Due Date:</label>
+            <input type="date" id="task-due-date" name="task-due-date">
+
+            <label for="task-priority">Priority:</label>
+            <select id="task-priority" name="task-priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="task-status">Status:</label>
+            <select id="task-status" name="task-status">
+                <option value="to-do">To Do</option>
+                <option value="in-progress">In Progress</option>
+                <option value="review">Review</option>
+                <option value="done">Done</option>
+            </select>
+
+            <button type="submit" class="dialog-submit-button">Add Task</button>
+            <button type="button" id="dialog-close-button">Cancel</button>
+        </form>
+    </dialog>
+    <script type="module" src="static/js/index.js"></script>
+</body>
+
+</html>
